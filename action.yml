@@ -1,0 +1,89 @@
+name: readme-forge
+description: Render self-hosted SVG stats cards for your GitHub profile README and commit them.
+author: furkanmeclis
+branding:
+  icon: bar-chart-2
+  color: purple
+
+inputs:
+  token:
+    description: Token used to read GitHub data. Use a PAT (read:user, repo) to include private contributions.
+    required: true
+  user:
+    description: GitHub username. Defaults to the repository owner.
+    default: ${{ github.repository_owner }}
+  out:
+    description: Output directory (relative to the repository root).
+    default: readme-forge
+  cards:
+    description: Comma-separated cards (stats, languages, streak, activity). Empty = all.
+    default: ""
+  themes:
+    description: Comma-separated themes (midnight, neon, dracula, ocean, light, auto).
+    default: midnight,light
+  top:
+    description: Number of languages to show.
+    default: "8"
+  exclude:
+    description: Comma-separated languages to ignore.
+    default: ""
+  days:
+    description: Activity chart window in days.
+    default: "60"
+  hide_border:
+    description: Hide the card border.
+    default: "false"
+  animate:
+    description: Enable CSS animations.
+    default: "true"
+  commit:
+    description: Commit and push changed cards.
+    default: "true"
+  commit_message:
+    description: Commit message.
+    default: "chore: update readme-forge cards"
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 24
+
+    - name: Render cards
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.token }}
+        RF_USER: ${{ inputs.user }}
+        RF_OUT: ${{ inputs.out }}
+        RF_CARDS: ${{ inputs.cards }}
+        RF_THEMES: ${{ inputs.themes }}
+        RF_TOP: ${{ inputs.top }}
+        RF_EXCLUDE: ${{ inputs.exclude }}
+        RF_DAYS: ${{ inputs.days }}
+        RF_HIDE_BORDER: ${{ inputs.hide_border }}
+        RF_ANIMATE: ${{ inputs.animate }}
+      run: |
+        args=(--user "$RF_USER" --out "$RF_OUT" --themes "$RF_THEMES" --top "$RF_TOP" --days "$RF_DAYS")
+        [ -n "$RF_CARDS" ] && args+=(--cards "$RF_CARDS")
+        [ -n "$RF_EXCLUDE" ] && args+=(--exclude "$RF_EXCLUDE")
+        [ "$RF_HIDE_BORDER" = "true" ] && args+=(--hide-border)
+        [ "$RF_ANIMATE" = "false" ] && args+=(--no-animate)
+        node "$GITHUB_ACTION_PATH/src/cli.ts" "${args[@]}"
+
+    - name: Commit cards
+      if: inputs.commit == 'true'
+      shell: bash
+      env:
+        RF_OUT: ${{ inputs.out }}
+        RF_MESSAGE: ${{ inputs.commit_message }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add -- "$RF_OUT"
+        if git diff --cached --quiet; then
+          echo "readme-forge: cards unchanged"
+        else
+          git commit -m "$RF_MESSAGE"
+          git push
+        fi

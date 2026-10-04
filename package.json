@@ -1,0 +1,20 @@
+{
+  "name": "readme-forge",
+  "version": "0.1.0",
+  "description": "Self-hosted, dependency-free SVG cards for your GitHub profile README.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=24" },
+  "bin": { "readme-forge": "./src/cli.ts" },
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "generate": "node src/cli.ts",
+    "demo": "node src/cli.ts --demo --out examples",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

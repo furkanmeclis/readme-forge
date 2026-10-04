@@ -1,0 +1,22 @@
+# Copy to <your-username>/<your-username>/.github/workflows/readme-forge.yml
+name: readme-forge
+
+on:
+  schedule:
+    - cron: "17 */6 * * *" # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: furkanmeclis/readme-forge@main
+        with:
+          # PAT with read:user + repo scopes to include private work;
+          # falls back to the built-in token (public data only).
+          token: ${{ secrets.README_FORGE_TOKEN || github.token }}
+          themes: midnight,light

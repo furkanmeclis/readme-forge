@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="220" viewBox="0 0 500 220" role="img" aria-labelledby="rf-streak-t rf-streak-d">
+<title id="rf-streak-t">Contribution streak</title>
+<desc id="rf-streak-d">Current streak 46 days, longest 46 days, 4505 total contributions</desc>
+<style>svg{--bg1:#07070f;--bg2:#12122a;--border:#2a2a4a;--title:#00f5d4;--text:#f0f0ff;--muted:#8a8ab0;--accent:#00f5d4;--accent2:#f15bb5;--track:#1c1c36;--grid:#191930;}
+text{font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif;fill:var(--text)}
+.title{font-size:17px;font-weight:700;fill:var(--title)}
+.sub{font-size:12px;fill:var(--muted)}
+.label{font-size:12px;fill:var(--muted);letter-spacing:.3px}
+.value{font-size:15px;font-weight:700;fill:var(--text);font-variant-numeric:tabular-nums}
+.big{font-weight:800;fill:var(--text);font-variant-numeric:tabular-nums}
+.fade{animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+.ring{animation:ring 1.3s cubic-bezier(.3,.8,.3,1) .25s both}@keyframes ring{from{stroke-dashoffset:263.89}}
+.flicker{transform-box:fill-box;transform-origin:50% 100%;animation:flicker 2.4s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:scale(1)}30%{transform:scale(1.06,.96)}60%{transform:scale(.97,1.05)}}</style>
+<defs>
+<linearGradient id="rf-streak-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--bg1)"/><stop offset="1" style="stop-color:var(--bg2)"/></linearGradient>
+<linearGradient id="rf-streak-stroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.55"/><stop offset=".35" style="stop-color:var(--border)"/><stop offset="1" style="stop-color:var(--accent2);stop-opacity:.55"/></linearGradient>
+<linearGradient id="rf-streak-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--accent2)"/></linearGradient>
+<radialGradient id="rf-streak-glow" cx="1" cy="0" r="1"><stop offset="0" style="stop-color:var(--accent2);stop-opacity:.22"/><stop offset=".6" style="stop-color:var(--accent2);stop-opacity:0"/></radialGradient>
+<radialGradient id="rf-streak-glow2" cx="0" cy="1" r=".9"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.12"/><stop offset=".6" style="stop-color:var(--accent);stop-opacity:0"/></radialGradient>
+<clipPath id="rf-streak-clip"><rect width="500" height="220" rx="14"/></clipPath>
+<linearGradient id="rf-streak-fire" x1="0" y1="1" x2="0" y2="0"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:#ffb347"/></linearGradient>
+<filter id="rf-streak-soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g clip-path="url(#rf-streak-clip)">
+<rect width="500" height="220" fill="url(#rf-streak-bg)"/>
+<rect width="500" height="220" fill="url(#rf-streak-glow)"/>
+<rect width="500" height="220" fill="url(#rf-streak-glow2)"/>
+</g>
+<rect x=".5" y=".5" width="499" height="219" rx="14" fill="none" stroke="url(#rf-streak-stroke)" stroke-width="1"/>
+<g class="fade" style="animation-delay:0ms">
+<rect x="24" y="22" width="4" height="18" rx="2" fill="url(#rf-streak-accent)"/>
+<text x="36" y="37" class="title">Contribution Streak</text>
+<text x="476" y="36" class="sub" text-anchor="end">since Sep 21, 2020</text>
+</g>
+<line x1="162.66666666666666" x2="162.66666666666666" y1="74" y2="190" style="stroke:var(--grid)" stroke-width="1"/><line x1="337.3333333333333" x2="337.3333333333333" y1="74" y2="190" style="stroke:var(--grid)" stroke-width="1"/>
+<g class="fade" style="animation-delay:250ms">
+<g transform="translate(73.33333333333333 66) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--muted);color:var(--muted)"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></g>
+<text x="81.33333333333333" y="126" class="big" font-size="28" text-anchor="middle">4,505</text>
+<text x="81.33333333333333" y="154" class="label" text-anchor="middle" style="fill:var(--text)">Total Contributions</text>
+<text x="81.33333333333333" y="172" class="sub" font-size="11" text-anchor="middle">all time</text>
+</g>
+<g class="fade" style="animation-delay:120ms">
+<circle cx="250" cy="120" r="42" fill="none" style="stroke:var(--track)" stroke-width="6"/>
+<circle class="ring" cx="250" cy="120" r="42" fill="none" stroke="url(#rf-streak-accent)" stroke-width="6" stroke-linecap="round"
+  stroke-dasharray="263.89" transform="rotate(-90 250 120)" filter="url(#rf-streak-soft)"/>
+<circle cx="250" cy="78" r="15" style="fill:var(--bg1)"/>
+<g class="flicker"><g transform="translate(238 64) scale(1)">
+<path d="M12 1.5c.8 3.3-1.6 5.2-1.6 8 0 1.6 1.1 2.7 2.4 2.7 1.5 0 2.4-1.2 2.2-3.6 2.6 2.2 4.5 5.1 4.5 8.4A7.5 7.5 0 0 1 4.5 17c0-4.6 3.2-7 4.9-10.3C10.3 5 11.3 3.3 12 1.5z" fill="url(#rf-streak-fire)"/>
+<path d="M12 22.5a3.6 3.6 0 0 1-3.6-3.6c0-2.3 1.8-3.4 2.6-5.3.4 1.4 1.4 2.1 2.3 2.1.9 0 1.5-.6 1.6-1.6 1 1.1 1.9 2.6 1.9 4.6A3.8 3.8 0 0 1 12 22.5z" style="fill:var(--bg1)" opacity=".55"/>
+</g></g>
+<text x="250" y="132" class="big" font-size="34" text-anchor="middle">46</text>
+<text x="250" y="186" class="label" text-anchor="middle" style="fill:var(--accent);font-weight:700">Current Streak</text>
+<text x="250" y="203" class="sub" font-size="11" text-anchor="middle">Aug 20 – Oct 4, 2026</text>
+</g>
+<g class="fade" style="animation-delay:350ms">
+<g transform="translate(410.6666666666667 66) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--muted);color:var(--muted)"><path d="M5 2h6v4a3 3 0 0 1-6 0zM5 3.5H2.5a2.5 2.5 0 0 0 2.6 3M11 3.5h2.5a2.5 2.5 0 0 1-2.6 3M8 9v3M5.5 14h5M6.5 12h3"/></g>
+<text x="418.6666666666667" y="126" class="big" font-size="28" text-anchor="middle">46</text>
+<text x="418.6666666666667" y="154" class="label" text-anchor="middle" style="fill:var(--text)">Longest Streak</text>
+<text x="418.6666666666667" y="172" class="sub" font-size="11" text-anchor="middle">Aug 20 – Oct 4, 2026</text>
+</g>
+</svg>

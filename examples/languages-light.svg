@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="232" viewBox="0 0 500 232" role="img" aria-labelledby="rf-langs-t rf-langs-d">
+<title id="rf-langs-t">Most Used Languages</title>
+<desc id="rf-langs-d">TypeScript 35%, PHP 28.5%, Go 15.3%, Python 8.8%, CSS 6.6%, Shell 2.9%, Dockerfile 1.5%, Vue 1.1%, Other 0.4%</desc>
+<style>svg{--bg1:#ffffff;--bg2:#f4f1fb;--border:#d0d7de;--title:#d6336c;--text:#1f2328;--muted:#656d76;--accent:#d6336c;--accent2:#6741d9;--track:#eaeef2;--grid:#eef0f3;}
+text{font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif;fill:var(--text)}
+.title{font-size:17px;font-weight:700;fill:var(--title)}
+.sub{font-size:12px;fill:var(--muted)}
+.label{font-size:12px;fill:var(--muted);letter-spacing:.3px}
+.value{font-size:15px;font-weight:700;fill:var(--text);font-variant-numeric:tabular-nums}
+.big{font-weight:800;fill:var(--text);font-variant-numeric:tabular-nums}
+.fade{animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+.seg{stroke-linecap:butt;animation:seg 1s cubic-bezier(.3,.8,.3,1) both}
+@keyframes seg{from{stroke-dasharray:0 351.86}}
+.bar{transform-box:fill-box;transform-origin:left;animation:grow .9s cubic-bezier(.3,.8,.3,1) both}</style>
+<defs>
+<linearGradient id="rf-langs-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--bg1)"/><stop offset="1" style="stop-color:var(--bg2)"/></linearGradient>
+<linearGradient id="rf-langs-stroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.55"/><stop offset=".35" style="stop-color:var(--border)"/><stop offset="1" style="stop-color:var(--accent2);stop-opacity:.55"/></linearGradient>
+<linearGradient id="rf-langs-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--accent2)"/></linearGradient>
+<radialGradient id="rf-langs-glow" cx="1" cy="0" r="1"><stop offset="0" style="stop-color:var(--accent2);stop-opacity:.22"/><stop offset=".6" style="stop-color:var(--accent2);stop-opacity:0"/></radialGradient>
+<radialGradient id="rf-langs-glow2" cx="0" cy="1" r=".9"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.12"/><stop offset=".6" style="stop-color:var(--accent);stop-opacity:0"/></radialGradient>
+<clipPath id="rf-langs-clip"><rect width="500" height="232" rx="14"/></clipPath>
+
+</defs>
+<g clip-path="url(#rf-langs-clip)">
+<rect width="500" height="232" fill="url(#rf-langs-bg)"/>
+<rect width="500" height="232" fill="url(#rf-langs-glow)"/>
+<rect width="500" height="232" fill="url(#rf-langs-glow2)"/>
+</g>
+<rect x=".5" y=".5" width="499" height="231" rx="14" fill="none" stroke="url(#rf-langs-stroke)" stroke-width="1"/>
+<g class="fade" style="animation-delay:0ms">
+<rect x="24" y="22" width="4" height="18" rx="2" fill="url(#rf-langs-accent)"/>
+<text x="36" y="37" class="title">Most Used Languages</text>
+
+</g>
+<circle cx="104" cy="141" r="56" fill="none" style="stroke:var(--track)" stroke-width="18"/>
+<circle class="seg" style="stroke:#3178c6;animation-delay:200ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="120.15 231.71" stroke-dashoffset="0.00"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#4F5D95;animation-delay:310ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="97.28 254.58" stroke-dashoffset="-123.15"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#00ADD8;animation-delay:420ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="50.83 301.02" stroke-dashoffset="-223.43"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#3572A5;animation-delay:530ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="27.96 323.89" stroke-dashoffset="-277.26"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#563d7c;animation-delay:640ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="20.22 331.64" stroke-dashoffset="-308.23"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#89e051;animation-delay:750ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="7.20 344.65" stroke-dashoffset="-331.45"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#384d54;animation-delay:860ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="2.28 349.58" stroke-dashoffset="-341.65"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#41b883;animation-delay:970ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="0.87 350.99" stroke-dashoffset="-346.93"
+  transform="rotate(-90 104 141)"/>
+<circle class="seg" style="stroke:#8b949e;animation-delay:1080ms"
+  cx="104" cy="141" r="56" fill="none" stroke-width="18"
+  stroke-dasharray="0.50 351.36" stroke-dashoffset="-350.80"
+  transform="rotate(-90 104 141)"/>
+<g class="fade" style="animation-delay:500ms">
+<text x="104" y="143" class="big" font-size="22" text-anchor="middle">35%</text>
+<text x="104" y="161" class="label" font-size="11" text-anchor="middle">TypeScript</text>
+</g>
+<g class="fade" style="animation-delay:250ms">
+<circle cx="217" cy="72" r="5" style="fill:#3178c6"/>
+<text x="229" y="76" class="label" style="fill:var(--text)">TypeScript</text>
+<text x="229" y="90" class="sub" font-size="10.5">35.0%</text>
+<rect x="268" y="85" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="268" y="85" width="60.0" height="3" rx="1.5" style="fill:#3178c6;animation-delay:400ms"/>
+</g>
+<g class="fade" style="animation-delay:320ms">
+<circle cx="361" cy="72" r="5" style="fill:#4F5D95"/>
+<text x="373" y="76" class="label" style="fill:var(--text)">PHP</text>
+<text x="373" y="90" class="sub" font-size="10.5">28.5%</text>
+<rect x="412" y="85" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="412" y="85" width="48.9" height="3" rx="1.5" style="fill:#4F5D95;animation-delay:470ms"/>
+</g>
+<g class="fade" style="animation-delay:390ms">
+<circle cx="217" cy="102" r="5" style="fill:#00ADD8"/>
+<text x="229" y="106" class="label" style="fill:var(--text)">Go</text>
+<text x="229" y="120" class="sub" font-size="10.5">15.3%</text>
+<rect x="268" y="115" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="268" y="115" width="26.2" height="3" rx="1.5" style="fill:#00ADD8;animation-delay:540ms"/>
+</g>
+<g class="fade" style="animation-delay:460ms">
+<circle cx="361" cy="102" r="5" style="fill:#3572A5"/>
+<text x="373" y="106" class="label" style="fill:var(--text)">Python</text>
+<text x="373" y="120" class="sub" font-size="10.5">8.8%</text>
+<rect x="412" y="115" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="412" y="115" width="15.1" height="3" rx="1.5" style="fill:#3572A5;animation-delay:610ms"/>
+</g>
+<g class="fade" style="animation-delay:530ms">
+<circle cx="217" cy="132" r="5" style="fill:#563d7c"/>
+<text x="229" y="136" class="label" style="fill:var(--text)">CSS</text>
+<text x="229" y="150" class="sub" font-size="10.5">6.6%</text>
+<rect x="268" y="145" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="268" y="145" width="11.3" height="3" rx="1.5" style="fill:#563d7c;animation-delay:680ms"/>
+</g>
+<g class="fade" style="animation-delay:600ms">
+<circle cx="361" cy="132" r="5" style="fill:#89e051"/>
+<text x="373" y="136" class="label" style="fill:var(--text)">Shell</text>
+<text x="373" y="150" class="sub" font-size="10.5">2.9%</text>
+<rect x="412" y="145" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="412" y="145" width="5.0" height="3" rx="1.5" style="fill:#89e051;animation-delay:750ms"/>
+</g>
+<g class="fade" style="animation-delay:670ms">
+<circle cx="217" cy="162" r="5" style="fill:#384d54"/>
+<text x="229" y="166" class="label" style="fill:var(--text)">Dockerfile</text>
+<text x="229" y="180" class="sub" font-size="10.5">1.5%</text>
+<rect x="268" y="175" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="268" y="175" width="2.6" height="3" rx="1.5" style="fill:#384d54;animation-delay:820ms"/>
+</g>
+<g class="fade" style="animation-delay:740ms">
+<circle cx="361" cy="162" r="5" style="fill:#41b883"/>
+<text x="373" y="166" class="label" style="fill:var(--text)">Vue</text>
+<text x="373" y="180" class="sub" font-size="10.5">1.1%</text>
+<rect x="412" y="175" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="412" y="175" width="2.0" height="3" rx="1.5" style="fill:#41b883;animation-delay:890ms"/>
+</g>
+<g class="fade" style="animation-delay:810ms">
+<circle cx="217" cy="192" r="5" style="fill:#8b949e"/>
+<text x="229" y="196" class="label" style="fill:var(--text)">Other</text>
+<text x="229" y="210" class="sub" font-size="10.5">0.4%</text>
+<rect x="268" y="205" width="60" height="3" rx="1.5" style="fill:var(--track)"/>
+<rect class="bar" x="268" y="205" width="2.0" height="3" rx="1.5" style="fill:#8b949e;animation-delay:960ms"/>
+</g>
+</svg>

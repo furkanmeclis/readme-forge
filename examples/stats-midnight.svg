@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="210" viewBox="0 0 500 210" role="img" aria-labelledby="rf-stats-t rf-stats-d">
+<title id="rf-stats-t">Octo Developer&#39;s GitHub stats</title>
+<desc id="rf-stats-d">Stars 342, commits 1204, pull requests 231, issues 47, level A+</desc>
+<style>svg{--bg1:#0d1117;--bg2:#161b2e;--border:#30363d;--title:#ff4d8d;--text:#e6edf3;--muted:#8b949e;--accent:#ff4d8d;--accent2:#7c5cff;--track:#21262d;--grid:#1f2633;}
+text{font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif;fill:var(--text)}
+.title{font-size:17px;font-weight:700;fill:var(--title)}
+.sub{font-size:12px;fill:var(--muted)}
+.label{font-size:12px;fill:var(--muted);letter-spacing:.3px}
+.value{font-size:15px;font-weight:700;fill:var(--text);font-variant-numeric:tabular-nums}
+.big{font-weight:800;fill:var(--text);font-variant-numeric:tabular-nums}
+.fade{animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+.ring{animation:ring 1.4s cubic-bezier(.3,.8,.3,1) .2s both}@keyframes ring{from{stroke-dashoffset:289.03}}</style>
+<defs>
+<linearGradient id="rf-stats-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--bg1)"/><stop offset="1" style="stop-color:var(--bg2)"/></linearGradient>
+<linearGradient id="rf-stats-stroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.55"/><stop offset=".35" style="stop-color:var(--border)"/><stop offset="1" style="stop-color:var(--accent2);stop-opacity:.55"/></linearGradient>
+<linearGradient id="rf-stats-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--accent2)"/></linearGradient>
+<radialGradient id="rf-stats-glow" cx="1" cy="0" r="1"><stop offset="0" style="stop-color:var(--accent2);stop-opacity:.22"/><stop offset=".6" style="stop-color:var(--accent2);stop-opacity:0"/></radialGradient>
+<radialGradient id="rf-stats-glow2" cx="0" cy="1" r=".9"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.12"/><stop offset=".6" style="stop-color:var(--accent);stop-opacity:0"/></radialGradient>
+<clipPath id="rf-stats-clip"><rect width="500" height="210" rx="14"/></clipPath>
+<filter id="rf-stats-soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g clip-path="url(#rf-stats-clip)">
+<rect width="500" height="210" fill="url(#rf-stats-bg)"/>
+<rect width="500" height="210" fill="url(#rf-stats-glow)"/>
+<rect width="500" height="210" fill="url(#rf-stats-glow2)"/>
+</g>
+<rect x=".5" y=".5" width="499" height="209" rx="14" fill="none" stroke="url(#rf-stats-stroke)" stroke-width="1"/>
+<g class="fade" style="animation-delay:0ms">
+<rect x="24" y="22" width="4" height="18" rx="2" fill="url(#rf-stats-accent)"/>
+<text x="36" y="37" class="title">Octo Developer</text>
+<text x="476" y="36" class="sub" text-anchor="end">@octo-dev</text>
+</g>
+<g class="fade" style="animation-delay:150ms">
+<g transform="translate(24 64) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--accent);color:var(--accent)"><polygon points="8.00,1.60 9.76,6.17 14.66,6.44 10.85,9.53 12.11,14.26 8.00,11.60 3.89,14.26 5.15,9.53 1.34,6.44 6.24,6.17" stroke-linejoin="round"/></g>
+<text x="48" y="76" class="label">Total Stars</text>
+<text x="172" y="76" class="value" text-anchor="end">342</text>
+</g>
+<g class="fade" style="animation-delay:240ms">
+<g transform="translate(184 64) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--accent);color:var(--accent)"><circle cx="8" cy="8" r="3"/><path d="M1 8h4M11 8h4"/></g>
+<text x="208" y="76" class="label">Commits (1y)</text>
+<text x="332" y="76" class="value" text-anchor="end">1.2k</text>
+</g>
+<g class="fade" style="animation-delay:330ms">
+<g transform="translate(24 98) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--accent);color:var(--accent)"><circle cx="4" cy="3.5" r="1.8"/><circle cx="4" cy="12.5" r="1.8"/><circle cx="12" cy="12.5" r="1.8"/><path d="M4 5.3v5.4M12 10.7V6.5a2 2 0 0 0-2-2H7.5M9 3 7.5 4.5 9 6"/></g>
+<text x="48" y="110" class="label">Pull Requests</text>
+<text x="172" y="110" class="value" text-anchor="end">231</text>
+</g>
+<g class="fade" style="animation-delay:420ms">
+<g transform="translate(184 98) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--accent);color:var(--accent)"><circle cx="8" cy="8" r="6.3"/><circle cx="8" cy="8" r="1.2" fill="currentColor" stroke="none"/></g>
+<text x="208" y="110" class="label">Issues</text>
+<text x="332" y="110" class="value" text-anchor="end">47</text>
+</g>
+<g class="fade" style="animation-delay:510ms">
+<g transform="translate(24 132) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--accent);color:var(--accent)"><rect x="3" y="1.5" width="10" height="13" rx="1.6"/><path d="M6 1.5v13M8.5 5h2"/></g>
+<text x="48" y="144" class="label">Repositories</text>
+<text x="172" y="144" class="value" text-anchor="end">64</text>
+</g>
+<g class="fade" style="animation-delay:600ms">
+<g transform="translate(184 132) scale(1)" fill="none" stroke-width="1.40" stroke-linecap="round" style="stroke:var(--accent);color:var(--accent)"><circle cx="4" cy="3" r="1.7"/><circle cx="12" cy="3" r="1.7"/><circle cx="8" cy="13" r="1.7"/><path d="M4 4.7V6a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4.7M8 8v3.3"/></g>
+<text x="208" y="144" class="label">Contributed to</text>
+<text x="332" y="144" class="value" text-anchor="end">18</text>
+</g>
+<g class="fade" style="animation-delay:100ms">
+<circle cx="412" cy="112" r="46" fill="none" style="stroke:var(--track)" stroke-width="9"/>
+<circle class="ring" cx="412" cy="112" r="46" fill="none" stroke="url(#rf-stats-accent)" stroke-width="9" stroke-linecap="round"
+  stroke-dasharray="289.03" stroke-dashoffset="17.04" transform="rotate(-90 412 112)" filter="url(#rf-stats-soft)"/>
+<text x="412" y="121" class="big" font-size="30" text-anchor="middle">A+</text>
+<text x="412" y="138" class="label" font-size="9" text-anchor="middle" letter-spacing="2">LEVEL</text>
+</g>
+<g class="fade" style="animation-delay:750ms">
+<line x1="24" x2="476" y1="176" y2="176" style="stroke:var(--grid)"/>
+<g transform="translate(24 185) scale(0.875)" fill="none" stroke-width="1.60" stroke-linecap="round" style="stroke:var(--accent);color:var(--accent)"><path d="M9 1.5 3.5 9H8l-1 5.5L12.5 7H8z" stroke-linejoin="round"/></g>
+<text x="44" y="196" class="sub"><tspan class="value" font-size="12">2,354</tspan> contributions in the last year · <tspan class="value" font-size="12">128</tspan> followers</text>
+</g>
+</svg>
