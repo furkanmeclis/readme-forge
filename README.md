@@ -4,15 +4,9 @@ Self-hosted, dependency-free, animated SVG cards for your GitHub profile README.
 No third-party card service, no rate limits, no fees: a scheduled GitHub Action
 renders the cards and commits them to your profile repo.
 
-<p>
-  <img src="examples/stats-midnight.svg" width="49%">
-  <img src="examples/streak-midnight.svg" width="49%">
-</p>
-<p>
-  <img src="examples/languages-midnight.svg" width="49%">
-  <img src="examples/stats-light.svg" width="49%">
-</p>
-<img src="examples/activity-midnight.svg" width="99%">
+<img src="examples/stats-midnight.svg" width="50%"><img src="examples/languages-midnight.svg" width="50%">
+<img src="examples/activity-midnight.svg" width="100%">
+<img src="examples/streak-midnight.svg" width="50%"><img src="examples/stats-light.svg" width="50%">
 
 <sub>Rendered from built-in demo data (`npm run demo`).</sub>
 
@@ -34,25 +28,14 @@ Themes: `midnight` · `neon` · `dracula` · `ocean` · `light` · `auto` (follo
 2. Optional, recommended: create a classic PAT with `read:user` and `repo` scopes and save it as the
    `README_FORGE_TOKEN` secret, so private contributions and languages count too.
 3. Run the workflow once (Actions → readme-forge → Run workflow). Cards land in `readme-forge/`.
-4. Reference them from your `README.md`. `<picture>` swaps the theme with GitHub's light/dark mode:
+4. Reference them from your `README.md`. Cards share a grid: half cards are 500 units wide and full
+   cards 1000, all with the same built-in margin. Put two half cards at `50%` **on one line with no
+   whitespace between them** and a full card at `100%`, and the edges and gaps line up. `<picture>`
+   swaps the theme with GitHub's light/dark mode:
 
 ```html
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="readme-forge/stats-midnight.svg">
-  <img src="readme-forge/stats-light.svg" alt="GitHub stats" width="49%">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="readme-forge/streak-midnight.svg">
-  <img src="readme-forge/streak-light.svg" alt="Contribution streak" width="49%">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="readme-forge/languages-midnight.svg">
-  <img src="readme-forge/languages-light.svg" alt="Most used languages" width="49%">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="readme-forge/activity-midnight.svg">
-  <img src="readme-forge/activity-light.svg" alt="Contribution activity" width="99%">
-</picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="readme-forge/stats-midnight.svg"><img src="readme-forge/stats-light.svg" alt="GitHub stats" width="50%"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="readme-forge/languages-midnight.svg"><img src="readme-forge/languages-light.svg" alt="Most used languages" width="50%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="readme-forge/activity-midnight.svg"><img src="readme-forge/activity-light.svg" alt="Contribution activity" width="100%"></picture>
 ```
 
 ### Action inputs

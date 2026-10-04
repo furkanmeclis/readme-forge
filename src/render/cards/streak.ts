@@ -1,9 +1,9 @@
 import type { StreakStats, Streak } from "../../stats/streak.ts";
-import { card, esc, fadeIn, heading, num, shortDate, type CardOptions } from "../svg.ts";
+import { GRID, card, esc, fadeIn, heading, inner, num, shortDate, type CardOptions } from "../svg.ts";
 import { flame, icon } from "../icons.ts";
 
-const W = 500;
-const H = 220;
+const W = inner(GRID.HALF);
+const H = inner(GRID.HALF_HEIGHT);
 const ID = "rf-streak";
 
 function range(s: Streak): string {
@@ -15,7 +15,7 @@ function range(s: Streak): string {
 
 export function renderStreak(s: StreakStats, since: string, opts: CardOptions): string {
   const cx = W / 2;
-  const cy = 120;
+  const cy = 124;
   const r = 42;
   const c = 2 * Math.PI * r;
 

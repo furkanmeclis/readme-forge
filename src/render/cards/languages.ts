@@ -1,12 +1,16 @@
 import type { LanguageShare } from "../../stats/languages.ts";
-import { card, esc, fadeIn, heading, type CardOptions } from "../svg.ts";
+import { GRID, card, esc, fadeIn, heading, inner, type CardOptions } from "../svg.ts";
 
-const W = 500;
+const W = inner(GRID.HALF);
 const ID = "rf-langs";
 
 export function renderLanguages(langs: LanguageShare[], opts: CardOptions, title = "Most Used Languages"): string {
   const rows = Math.max(1, Math.ceil(langs.length / 2));
-  const H = Math.max(210, 82 + rows * 30);
+  // Fixed height so it lines up with the stats card; rows tighten when there are many.
+  const H = inner(GRID.HALF_HEIGHT);
+  const rowH = Math.min(30, (H - 70) / rows);
+  // Legend block vertically centred in the area under the heading.
+  const legendTop = 50 + (H - 50 - rows * rowH) / 2 + 20;
 
   // Donut
   const cx = 104;
@@ -40,8 +44,8 @@ export function renderLanguages(langs: LanguageShare[], opts: CardOptions, title
     .map((l, i) => {
       const col = i % 2;
       const row = Math.floor(i / 2);
-      const x = 212 + col * 144;
-      const y = 76 + row * 30;
+      const x = 200 + col * 140;
+      const y = legendTop + row * rowH;
       return `<g${fadeIn(opts, 250 + i * 70)}>
 <circle cx="${x + 5}" cy="${y - 4}" r="5" style="fill:${l.color}"/>
 <text x="${x + 17}" y="${y}" class="label" style="fill:var(--text)">${esc(l.name)}</text>

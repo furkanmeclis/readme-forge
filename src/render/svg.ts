@@ -8,6 +8,16 @@ export interface CardOptions {
 
 export const DEFAULT_CARD_OPTIONS: CardOptions = { theme: "midnight", hideBorder: false, animate: true };
 
+/**
+ * Layout grid shared by all cards so they tile cleanly in a README:
+ * half cards are HALF wide, full-width cards exactly 2×HALF, all with the same
+ * transparent outer MARGIN — at 50% / 100% widths edges line up and gaps match.
+ */
+export const GRID = { HALF: 500, FULL: 1000, MARGIN: 8, HALF_HEIGHT: 240 } as const;
+
+/** Drawable width/height inside the outer margin. */
+export const inner = (outer: number) => outer - 2 * GRID.MARGIN;
+
 export const FONT = `'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif`;
 
 export function esc(s: string): string {
@@ -69,14 +79,15 @@ export interface CardShell {
   body: string;
 }
 
-/** Root SVG: themed background with a soft glow, gradient border, extra css/defs. */
+/** Root SVG (`width`/`height` are the visible card, margin is added around it): themed background with a soft glow, gradient border, extra css/defs. */
 export function card(shell: CardShell, opts: CardOptions): string {
   const { id, width: w, height: h } = shell;
+  const m = GRID.MARGIN;
   const css = themeCss(opts.theme) + BASE_CSS + (shell.css ?? "") + (opts.animate ? "" : "*{animation:none!important}");
   const border = opts.hideBorder
     ? ""
     : `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="14" fill="none" stroke="url(#${id}-stroke)" stroke-width="1"/>`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="${id}-t ${id}-d">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w + 2 * m}" height="${h + 2 * m}" viewBox="0 0 ${w + 2 * m} ${h + 2 * m}" role="img" aria-labelledby="${id}-t ${id}-d">
 <title id="${id}-t">${esc(shell.title)}</title>
 <desc id="${id}-d">${esc(shell.desc)}</desc>
 <style>${css}</style>
@@ -89,6 +100,7 @@ export function card(shell: CardShell, opts: CardOptions): string {
 <clipPath id="${id}-clip"><rect width="${w}" height="${h}" rx="14"/></clipPath>
 ${shell.defs ?? ""}
 </defs>
+<g transform="translate(${m} ${m})">
 <g clip-path="url(#${id}-clip)">
 <rect width="${w}" height="${h}" fill="url(#${id}-bg)"/>
 <rect width="${w}" height="${h}" fill="url(#${id}-glow)"/>
@@ -96,6 +108,7 @@ ${shell.defs ?? ""}
 </g>
 ${border}
 ${shell.body}
+</g>
 </svg>
 `;
 }

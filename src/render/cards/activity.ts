@@ -1,7 +1,7 @@
 import type { ContributionDay } from "../../types.ts";
-import { card, compact, esc, fadeIn, heading, num, shortDate, type CardOptions } from "../svg.ts";
+import { GRID, card, compact, esc, fadeIn, heading, inner, num, shortDate, type CardOptions } from "../svg.ts";
 
-const W = 860;
+const W = inner(GRID.FULL);
 const H = 270;
 const ID = "rf-activity";
 const PAD = { left: 58, right: 28, top: 74, bottom: 46 };

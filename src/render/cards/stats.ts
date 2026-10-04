@@ -1,10 +1,10 @@
 import type { ProfileData } from "../../types.ts";
 import { computeLevel } from "../../stats/level.ts";
-import { card, compact, esc, fadeIn, heading, num, type CardOptions } from "../svg.ts";
+import { GRID, card, compact, esc, fadeIn, heading, inner, num, type CardOptions } from "../svg.ts";
 import { icon, type IconName } from "../icons.ts";
 
-const W = 500;
-const H = 210;
+const W = inner(GRID.HALF);
+const H = inner(GRID.HALF_HEIGHT);
 const ID = "rf-stats";
 
 export function renderStats(p: ProfileData, opts: CardOptions): string {
@@ -31,7 +31,7 @@ export function renderStats(p: ProfileData, opts: CardOptions): string {
       const col = i % 2;
       const row = Math.floor(i / 2);
       const x = 24 + col * 160;
-      const y = 76 + row * 34;
+      const y = 86 + row * 36;
       return `<g${fadeIn(opts, 150 + i * 90)}>
 ${icon(ic, x, y - 12)}
 <text x="${x + 24}" y="${y}" class="label">${esc(label)}</text>
@@ -41,8 +41,8 @@ ${icon(ic, x, y - 12)}
     .join("\n");
 
   // Level ring
-  const cx = 412;
-  const cy = 112;
+  const cx = W - 84;
+  const cy = 124;
   const r = 46;
   const c = 2 * Math.PI * r;
   const offset = c * (1 - level.percent);
